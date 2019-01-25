@@ -1,0 +1,56 @@
+{% extends 'p_manager/base.html' %}
+{% block title %}Create New Password {% endblock title %}
+{% block body %}
+    <div id="wrapper">
+        <div id="page-wrapper" style="min-height: 534px;">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Select options for new password
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <form role="form" action="{% url 'p_manager:create_pass' %}" method="post" name="p_form" onsubmit="return checkPassword()">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label>Password Length</label>
+                                        <input class="form-control" name="len" value="16" size="20">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password Options </label>
+                                        <div class="checkbox">
+                                           <label>
+                                               <input type="checkbox" value="1" name="uppercase" checked="checked">Enable uppercase (ex:ABC...)
+                                           </label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" value="1" name="symbol" checked="checked">Enable symbols (ex:!/&...)
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary btn-block btn-lg" value="Create Password">
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function checkPassword(){
+        let pass_len = document.p_form.len.value;
+        pass_len = Number(pass_len);
+        if (pass_len <= 4){
+            alert('Password Length is too short.');
+            return false
+        } else if(pass_len >100){
+            alert('Password Length is too long');
+            return false
+        }
+    }
+</script>
+{% endblock body %}

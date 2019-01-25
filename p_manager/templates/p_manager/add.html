@@ -1,0 +1,35 @@
+{% extends 'p_manager/base.html' %}
+{% block title %}Add Password {% endblock title %}
+{% block body %}
+<div id="wrapper">
+    <div id="page-wrapper" style="min-height:  534px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Add New Password
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" action="{% url 'p_manager:add_pass' %}" role="form">
+                        {% csrf_token %}
+                            <div class="form-group">
+                                <label>Password</label>
+                                 <input type="text" class="form-control" value="{% if password %}{{password}}{% endif %}" name="password">
+                            </div>
+                            <div class="form-group">
+                                <label>Purpose</label>
+                                <input class="form-control" name="purpose" placeholder="No text">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea class="form-control" name="description" rows="3"> </textarea>
+                            </div>
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Add Password">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
