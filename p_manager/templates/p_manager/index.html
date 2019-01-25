@@ -23,9 +23,7 @@
                             <tr name="pw_row{{forloop.counter}}">
                                 <th class="col-lg-2" id="pw_id{{ forloop.counter }}">{{ pass_row.id }}</th>
                                 <th class="col-lg-4" id="pw{{ forloop.counter }}">
-                                    <span id="pw_sp{{ forloop.counter}}">
-                                    {{ pass_row.password }}
-                                </span>
+                                    <span id="pw_sp{{ forloop.counter}}">{{ pass_row.password }}</span>
                                     <button class="btn btn-xs" data-clipboard-target="#pw_sp{{ forloop.counter }}" id="clip{{ forloop.counter }}">
                                         <span class="fa fa-copy"></span>
                                     </button>
@@ -38,7 +36,7 @@
                                 </button>
                                 <form style="display: inline" onsubmit="return delPassword({{forloop.counter}})" method="post">
                                     {% csrf_token %}
-                                    <input type="hidden" value="{{forloop.counter}}">
+                                    <input type="hidden" id="del_pw{{forloop.counter}}" value="{{ pass_row.id }}">
                                     <button type="submit" class="btn-danger btn-circle">
                                         <i class="fa fa-times"></i>
                                     </button>
@@ -74,9 +72,9 @@
             location.href="{% url 'p_manager:create_pass' %}"
         }
         function delPassword(num) {
-            let pw_num = 'pw' + String(num);
+            let pw_num = 'pw_sp' + String(num);
             let pw_id = document.getElementById(pw_num);
-            let password = pw_id[0].textContent;
+            let password = pw_id.textContent;
             let result = window.confirm('Are You sure to delete '+password+' ?');
             return result
         }

@@ -1,5 +1,4 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -29,9 +28,12 @@ def update(request):
 
 @login_required
 def index(request):
+    if request.method == 'POST':
+        # for
+        pass
     master_pass = 'test'
     operation = manager.DBOperation(master_pass)
-    pw_model = Password.objects.all()
+    pw_model = Password.objects.filter(pw_user=request.user)
     pw_dict = []
     for i in pw_model:
         pw_dict.append({
@@ -45,7 +47,7 @@ def index(request):
 
 def auth_login(request):
     if request.user.is_authenticated:
-        return render(request, 'p_manager/index.html')
+        return redirect('p_manager:index')
 
     if request.method == 'POST':
         username = request.POST['username']

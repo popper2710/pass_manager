@@ -132,4 +132,6 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'p_manager:login'
 LOGIN_REDIRECT_URL = 'p_manager:index'
+SESSION_COOKIE_AGE = 900
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
