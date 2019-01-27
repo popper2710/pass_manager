@@ -38,13 +38,14 @@ class PasswordUpdateView(UpdateView):
 
     def get_context_data(self, **kwargs):
         context_data = super().get_context_data()
-        form = context_data['form']
-        e_pass = form['pw'].value()
-        d_pass = self.operation.decrypt_pass(e_pass)
-        new_form = {'pw': d_pass,
-                    'purpose': form['purpose'].value(),
-                    'description': form['description'].value()}
-        context_data['form'] = PasswordForm(new_form)
+        if self.request.method == 'GET':
+            form = context_data['form']
+            e_pass = form['pw'].value()
+            d_pass = self.operation.decrypt_pass(e_pass)
+            new_form = {'pw': d_pass,
+                        'purpose': form['purpose'].value(),
+                        'description': form['description'].value()}
+            context_data['form'] = PasswordForm(new_form)
         return context_data
 
     def form_valid(self, form):
