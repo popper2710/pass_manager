@@ -29,21 +29,28 @@ class PasswordUpdateView(UpdateView):
     model = Password
     form_class = PasswordForm
     template_name = "p_manager/update.html"
-    context_object_name = 'u_pass'
     master_pass = 'test'
     operation = manager.DBOperation(master_pass)
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        u_query = queryset.filter(pass_id=self.kwargs['pk'])
-        u_query[0].pw = self.operation.decrypt_pass(u_query[0].pw)
-        u_query.save(commit=False)
-        return u_query
+        return queryset.filter(pw_user=self.request.user)
+
+    def get_context_data(self, **kwargs):
+        context_data = super().get_context_data()
+        form = context_data['form']
+        e_pass = form['pw'].value()
+        d_pass = self.operation.decrypt_pass(e_pass)
+        new_form = {'pw': d_pass,
+                    'purpose': form['purpose'].value(),
+                    'description': form['description'].value()}
+        context_data['form'] = PasswordForm(new_form)
+        return context_data
 
     def form_valid(self, form):
         post = form.save(commit=False)
         post.pw_user = self.request.user
-        print(post.pw)
+        post.pw = self.operation.encrypt_pass(post.pw)
         post.save()
         return redirect('p_manager:index')
 
