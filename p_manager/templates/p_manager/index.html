@@ -36,7 +36,7 @@
                                 </button>
                                 <form style="display: inline" onsubmit="return delPassword({{forloop.counter}})" method="post">
                                     {% csrf_token %}
-                                    <input type="hidden" id="del_pw{{forloop.counter}}" value="{{ pass_row.id }}">
+                                    <input type="hidden" name="del_pw" value="{{ pass_row.id }}">
                                     <button type="submit" class="btn-danger btn-circle">
                                         <i class="fa fa-times"></i>
                                     </button>

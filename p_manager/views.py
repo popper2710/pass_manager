@@ -1,5 +1,4 @@
-from django.shortcuts import render,redirect
-from django.urls import reverse
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -15,7 +14,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return HttpResponseRedirect(reverse('p_manager:index'))
+            return redirect('p_manager:index')
     else:
         form = UserCreationForm()
     return render(request, 'p_manager/signup.html', {'form': form})
@@ -29,8 +28,10 @@ def update(request):
 @login_required
 def index(request):
     if request.method == 'POST':
-        # for
-        pass
+        pw_id = request.POST["del_pw"]
+        delete_pw = Password.objects.get(pass_id=pw_id)
+        delete_pw.delete()
+
     master_pass = 'test'
     operation = manager.DBOperation(master_pass)
     pw_model = Password.objects.filter(pw_user=request.user)
@@ -106,7 +107,7 @@ def add_pass(request):
                                 pw=e_pass,
                                 purpose=request.POST['purpose'],
                                 description=request.POST['description'])
-        return HttpResponseRedirect(reverse('p_manager:index'))
+        return redirect('p_manager:index')
 
     except KeyError:
         return render(request, 'p_manager/add.html')
