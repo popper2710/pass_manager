@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'p_manager.apps.PManagerConfig',
+    'widget_tweaks',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'pass_manager.urls'
@@ -134,4 +137,7 @@ LOGIN_URL = 'p_manager:login'
 LOGIN_REDIRECT_URL = 'p_manager:index'
 SESSION_COOKIE_AGE = 900
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+INTERNAL_IPS = ('127.0.0.1', '218.220.151.212')
+
 

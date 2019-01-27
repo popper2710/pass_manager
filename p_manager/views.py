@@ -2,10 +2,14 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import UpdateView
+from django.utils.decorators import method_decorator
+
 import ulid
 
 from . import manager
 from .models import Password
+from .forms import PasswordForm
 
 
 def signup(request):
@@ -20,9 +24,28 @@ def signup(request):
     return render(request, 'p_manager/signup.html', {'form': form})
 
 
-@login_required
-def update(request):
-    return render(request, 'p_manager/update.html')
+@method_decorator(login_required, name='dispatch')
+class PasswordUpdateView(UpdateView):
+    model = Password
+    form_class = PasswordForm
+    template_name = "p_manager/update.html"
+    context_object_name = 'u_pass'
+    master_pass = 'test'
+    operation = manager.DBOperation(master_pass)
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        u_query = queryset.filter(pass_id=self.kwargs['pk'])
+        u_query[0].pw = self.operation.decrypt_pass(u_query[0].pw)
+        u_query.save(commit=False)
+        return u_query
+
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.pw_user = self.request.user
+        print(post.pw)
+        post.save()
+        return redirect('p_manager:index')
 
 
 @login_required

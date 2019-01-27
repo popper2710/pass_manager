@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'p_manager/base.html' %}
 
-</body>
-</html>
+{% block title %} Password Update {% endblock title %}
+{% block body %}
+ <div id="wrapper">
+    <div id="page-wrapper" style="min-height:  534px;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Add New Password
+                    </div>
+                    <div class="panel-body">
+                        <form method="post" class="mb-4" novalidate>
+                        {% csrf_token %}
+                        {% include 'p_manager/form.html' %}
+                            <button type="submit" class="btn btn-success">Save changes</button>
+                            <a href="{% url 'p_manager:index' %}" class="btn btn-primary" role="button">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body%}

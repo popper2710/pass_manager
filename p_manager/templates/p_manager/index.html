@@ -31,7 +31,7 @@
                                 <th class="col-lg-2" id="purpose{{forloop.counter}}">{{ pass_row.purpose }}</th>
                                 <th class="col-lg-3" id="desc{{forloop.counter}}">{{ pass_row.description }}</th>
                                 <th class="col-lg-1">
-                                <button type="button" class="btn-success btn-circle" onclick="linkUpdate()">
+                                <button type="button" class="btn-success btn-circle" onclick="location.href='{% url "p_manager:update" pass_row.id %}'">
                                     <i class="fa fa-wrench"></i>
                                 </button>
                                 <form style="display: inline" onsubmit="return delPassword({{forloop.counter}})" method="post">
@@ -60,14 +60,16 @@
 <script src="{% static 'p_manager/dist/js/clipboard.min.js' %}"></script>
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
+        jQuery(function ($) {
+            $("#dataTables-example").DataTable({
+                // enable scroll bar
+                scrollX: true,
+
+                // disable Password Id col
+                columnDefs:[
+                    { targets: 0, visible: false }
+            ]});
         });
-    });
-        function linkUpdate() {
-            location.href = "{% url 'p_manager:update' %}"
-        }
         function linkCreate() {
             location.href="{% url 'p_manager:create_pass' %}"
         }
