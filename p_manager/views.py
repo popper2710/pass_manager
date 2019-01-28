@@ -99,7 +99,7 @@ def auth_login(request):
         if user is not None:
             login(request, user)
             request.session['master_pass'] = username + password
-            return render(request, 'p_manager/index.html')
+            return redirect('p_manager:index')
         else:
             error_message = 'Username or password is invalid.'
             return render(request, 'p_manager/login.html', {'error_message': error_message})
