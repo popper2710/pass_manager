@@ -11,7 +11,6 @@
                     <div class="panel-body">
                         <form role="form" action="{% url 'p_manager:signup' %}" method="post">
                         {% csrf_token %}
-                            <fieldset>
                                 <!--<div class="form-group">-->
                                     <!--<label>Username</label>-->
                                     <!--<input class="form-control" placeholder="username" name="username">-->
@@ -24,19 +23,8 @@
                                     <!--<label>Confirm Password</label>-->
                                     <!--<input class="form-control" placeholder="confirm password" name="password2" type="password">-->
                                 <!--</div>-->
-                                {% if form.errors %}
-                                    {% for fields in form %}
-                                        {% for error in field.errors %}
-                                            <p class="text-danger">
-                                                {{ error }}
-                                            </p>
-                                        {% endfor %}
-                                    {% endfor %}
-                                {% endif %}
-                                {{ form.as_p }}
-                                <!-- Change this to a button or input when using this as a form -->
-                                <input type="submit" class="btn btn-lg btn-success btn-block" value="Register">
-                            </fieldset>
+                            {% include 'p_manager/form.html' %}
+                            <input type="submit" class="btn btn-lg btn-success btn-block" value="Register">
                         </form>
                     </div>
                 </div>

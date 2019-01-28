@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from django.views.generic import UpdateView
 from django.utils.decorators import method_decorator
 
@@ -9,18 +9,18 @@ import ulid
 
 from . import manager
 from .models import Password
-from .forms import PasswordForm
+from .forms import PasswordForm, SignupForm
 
 
 def signup(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             return redirect('p_manager:index')
     else:
-        form = UserCreationForm()
+        form = SignupForm()
     return render(request, 'p_manager/signup.html', {'form': form})
 
 
@@ -54,6 +54,17 @@ class PasswordUpdateView(UpdateView):
         post.pw = self.operation.encrypt_pass(post.pw)
         post.save()
         return redirect('p_manager:index')
+
+
+@method_decorator(login_required, name='dispatch')
+class UserUpdateView(UpdateView):
+    model = User
+    fields = ('username', 'email',)
+    template_name = 'p_manager/change_user.html'
+    success_url = 'p_manager:change_user'
+
+    def get_object(self):
+        return self.request.user
 
 
 @login_required
