@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'p_manager.apps.PManagerConfig',
     'widget_tweaks',
     'debug_toolbar',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
