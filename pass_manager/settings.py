@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%xecq&fl5-jpjj68r&ynaw@vez4)6fhn&@&wx7feampo--g@u@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['52.198.196.142', ]
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -140,4 +140,4 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 INTERNAL_IPS = ('127.0.0.1', '218.220.151.212')
 
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

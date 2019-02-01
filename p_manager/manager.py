@@ -4,11 +4,12 @@ import secrets
 import string
 import sys
 
+import base64
 import ulid
 import MySQLdb
 import lepl.apps.rfc3696
 
-from .AES import AESCipher
+from AES import AESCipher
 
 
 def check_master_pass(mail, master_pass):
@@ -93,7 +94,7 @@ class DBOperation:
         c.execute('SELECT pass_id, purpose, description FROM pass_table')
         result = c.fetchall()
         for row in result:
-            print('|',end='')
+            print('|', end='')
             for i in row:
                 print(i + ' |', end='')
             print('')
@@ -138,30 +139,31 @@ class DBOperation:
         sql = 'SELECT * FROM key_table WHERE key_id = %s'
         c.execute(sql, (key_id,))
         k_result = c.fetchall()[0]
-        key = hashlib.pbkdf2_hmac('sha256', master_pass.encode(), k_result[1], k_result[2])
         return key
 
     def encrypt_pass(self, password):
-        c = self.c
-        self.create_key()
-        c.execute('SELECT key_id FROM key_table')
-        id_ls = c.fetchall()[0]
-        select_id = secrets.choice(id_ls)
-        key = self.extract_key(select_id)
+        master_pass = self.master_pass
+        salt = secrets.token_bytes(64)
+        num = secrets.choice(range(2500000, 3000000))
+        key = hashlib.pbkdf2_hmac('sha256', master_pass.encode(), salt, num)
 
         cipher = AESCipher(key=key)
-        e_pass = cipher.encrypt(password)
-        str_id = str(select_id)
-        len_id = 3 - len(str_id)
-        if len_id > 0:
-            str_id = '0'*len_id + str_id
-        return e_pass.decode() + str_id
+        s_num = str(num)
+        s_salt = base64.b64encode(salt).decode('ascii')
+        e_pass = '$'.join([s_num, s_salt, cipher.encrypt(password).decode('ascii')])
+
+        return e_pass
 
     def decrypt_pass(self, e_pass):
-        key_id = int(e_pass[-3:])
-        key = self.extract_key(key_id)
+        pass_list = e_pass.split('$')
+        master_pass = self.master_pass
+
+        num = int(pass_list[0])
+        salt = base64.b64decode(pass_list[1].encode('ascii'))
+        key = hashlib.pbkdf2_hmac('sha256', master_pass.encode(), salt, num)
+
         cipher = AESCipher(key)
-        password = cipher.decrypt(e_pass[:-3])
+        password = cipher.decrypt(pass_list[2].encode('ascii'))
 
         return password.decode()
 
@@ -193,7 +195,7 @@ def create_pass(pass_len=16, uppercase=True, symbol=True):
 
 
 if __name__ == '__main__':
-    mail = 'hige1332@yahoo.co.jp'
-    password = 'test'
-    # create_master_pass(mail,password)
-    check_master_pass(mail, password)
+    operation = DBOperation('test')
+    e_pass = operation.encrypt_pass('-'*100)
+    print(e_pass)
+    print(operation.decrypt_pass(e_pass))
