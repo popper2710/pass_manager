@@ -9,8 +9,8 @@ class MasterPassOperator:
 
     def __init__(self):
         os.makedirs('tmp', exist_ok=True)
-        print(os.getcwd())
-        print(os.listdir('./tmp'))
+        # print(os.getcwd())
+        # print(os.listdir('./tmp'))
 
     def master_pass_recorder(self, password):
         token = secrets.token_bytes(64)

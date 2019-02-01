@@ -8,13 +8,15 @@ def clean_tmp():
         return None
 
     file_list = os.listdir('./tmp')
-    os.chdir('./tmp')
+    # print(file_list)
+    # os.chdir('./tmp')
 
     for file_name in file_list:
-        make_time = ulid.from_str(file_name).timestamp().datetime
+        check_time = ulid.from_str(file_name).timestamp().datetime + datetime.timedelta(hours=9, minutes=15)
         now = datetime.datetime.now()
-        if now > make_time + datetime.timedelta(minutes=15):
+        if now >= check_time:
             os.remove(file_name)
+            print('remove tmp_file:{}'.format(file_name))
 
 
 if __name__ == "__main__":

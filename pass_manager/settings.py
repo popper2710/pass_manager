@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import pickle
+
+with open('.db_info', 'rb') as f:
+    db_info = pickle.load(f)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -81,8 +85,8 @@ DATABASES = {
         'default': {         
             'ENGINE': 'django.db.backends.mysql',         
             'NAME': 'pass_db',  # DB名を設定
-            'USER': 'pw_manager',  # DBへ接続するユーザIDを設定
-            'PASSWORD': 'test',  # DBへ接続するユーザIDのパスワードを設定
+            'USER': db_info['username'],  # DBへ接続するユーザIDを設定
+            'PASSWORD': db_info['password'],  # DBへ接続するユーザIDのパスワードを設定
             'HOST': 'localhost',         
             'PORT': '3306',         
             'OPTIONS': {             

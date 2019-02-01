@@ -2,150 +2,40 @@ import hashlib
 import pickle
 import secrets
 import string
-import sys
 
 import base64
-import ulid
 import MySQLdb
-import lepl.apps.rfc3696
 
-from AES import AESCipher
-
-
-def check_master_pass(mail, master_pass):
-    with open('p_manager/.pass_hash', 'rb') as f:
-        hash_pkl = pickle.load(f)
-        check_hash = hash_pkl['hash']
-        num = hash_pkl['num']
-        salt = hash_pkl['salt']
-    input_hash = hashlib.pbkdf2_hmac('sha256', (master_pass+mail).encode(), salt, num)
-
-    assert check_hash == input_hash, 'Invalid password or email'
-    return master_pass
+from .AES import AESCipher
 
 
-def create_master_pass(mail, password):
-    new_salt = secrets.token_bytes(64)
-    new_num = secrets.choice(range(100000, 150000))
-    email_validator = lepl.apps.rfc3696.Email()
-
-    if not email_validator(mail):
-        return False
-
-    new_hash = hashlib.pbkdf2_hmac('sha256', (password+mail).encode(), new_salt, new_num)
-
-    with open('.pass_hash', 'wb') as f:
+def create_master_pass(username, password):
+    with open('.db_info', 'wb') as f:
         hash_dict = {
-            'hash': new_hash,
-            'num': new_num,
-            'salt': new_salt
+            'username': username,
+            'password': password,
         }
         pickle.dump(hash_dict, f)
 
 
 class DBOperation:
-    def __init__(self, master_pass):
-        self.conn = MySQLdb.connect(db='pass_db', user='pw_manager', passwd=master_pass)
-        self.c = self.conn.cursor()
-        self.master_pass = master_pass
+    def __init__(self, crypt_pass):
+        with open('.db_info', 'rb') as f:
+            db_info = pickle.load(f)
 
-        try:
-            self.c.execute('SELECT 1 FROM pass_table limit 1;')
-            # self.c.execute('DROP TABLE pass_table;')
-        except MySQLdb.Error:
-            self.c.execute('''
-            CREATE TABLE pass_table(
-            pass_id CHAR(26) NOT NULL PRIMARY KEY ,
-            password BLOB,
-            purpose TEXT,
-            description TEXT
-            )
-            ''')
-            print("Create new table because can't find it.")
+        self.conn = MySQLdb.connect(db='pass_db', user=db_info['username'], passwd=db_info['password'])
+        self.c = self.conn.cursor()
+        self.crypt_pass = crypt_pass
 
     def __del__(self):
         self.c.close()
         self.conn.close()
 
-    def insert_pass_row(self, password, purpose='No text', description='No text'):
-        c = self.c
-        conn = self.conn
-        pass_id = ulid.new()
-        e_pass = self.encrypt_pass(password)
-
-        sql = 'INSERT INTO pass_table VALUES(%s, %s, %s, %s)'
-        c.execute(sql, (pass_id, e_pass, purpose, description))
-
-        conn.commit()
-        print('Insert Success')
-
-    def update_pass_row(self, pass_id, new_row):
-        c = self.c
-        conn = self.conn
-        for k, v in new_row.items:
-            sql = 'UPDATE pass_TABLE SET %s = %s WHERE ID = %s'
-            c.execute(sql, (k, v, pass_id))
-        conn.commit()
-        print('Update Success')
-        return None
-
-    def show_table(self):
-        c = self.c
-        c.execute('SELECT pass_id, purpose, description FROM pass_table')
-        result = c.fetchall()
-        for row in result:
-            print('|', end='')
-            for i in row:
-                print(i + ' |', end='')
-            print('')
-
-        return None
-
-    def select_row(self, pass_id):
-        c = self.c
-        sql = 'SELECT * FROM pass_table WHERE pass_id = %s'
-        c.execute(sql, (pass_id,))
-        result = c.fetchall()
-        return result
-
-    def create_key(self):
-        c = self.c
-        conn = self.conn
-        try:
-            c.execute('SELECT 1 FROM key_table limit 1;')
-            # c.execute('DROP TABLE key_table;')
-        except MySQLdb.Error:
-            c.execute('''
-            CREATE TABLE key_table(
-            key_id TINYINT UNSIGNED AUTO_INCREMENT,
-            salt BINARY(128),
-            num INT(7),
-            INDEX(key_id)
-            )
-            ''')
-            print("Create new key_table because can't find table.", file=sys.stderr)
-
-        salt = secrets.token_bytes(128)
-        num = secrets.choice(range(1000000, 1500000))
-        sql = 'INSERT INTO key_table(salt, num) VALUES (%s, %s)'
-        c.execute(sql, (salt, num))
-        conn.commit()
-        print('Success to create new key!!')
-        return None
-
-    def extract_key(self, key_id):
-        master_pass = self.master_pass
-        c = self.c
-        sql = 'SELECT * FROM key_table WHERE key_id = %s'
-        c.execute(sql, (key_id,))
-        k_result = c.fetchall()[0]
-        return key
-
     def encrypt_pass(self, password):
-        master_pass = self.master_pass
+        crypt_pass = self.crypt_pass
         salt = secrets.token_bytes(64)
         num = secrets.choice(range(2500000, 3000000))
-        key = hashlib.pbkdf2_hmac('sha256', master_pass.encode(), salt, num)
+        key = hashlib.pbkdf2_hmac('sha256', crypt_pass.encode(), salt, num)
 
         cipher = AESCipher(key=key)
         s_num = str(num)
@@ -156,11 +46,11 @@ class DBOperation:
 
     def decrypt_pass(self, e_pass):
         pass_list = e_pass.split('$')
-        master_pass = self.master_pass
+        crypt_pass = self.crypt_pass
 
         num = int(pass_list[0])
         salt = base64.b64decode(pass_list[1].encode('ascii'))
-        key = hashlib.pbkdf2_hmac('sha256', master_pass.encode(), salt, num)
+        key = hashlib.pbkdf2_hmac('sha256', crypt_pass.encode(), salt, num)
 
         cipher = AESCipher(key)
         password = cipher.decrypt(pass_list[2].encode('ascii'))
@@ -199,3 +89,4 @@ if __name__ == '__main__':
     e_pass = operation.encrypt_pass('-'*100)
     print(e_pass)
     print(operation.decrypt_pass(e_pass))
+

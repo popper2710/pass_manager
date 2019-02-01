@@ -862,3 +862,71 @@ spawned uWSGI worker 10 (pid: 29624, cores: 1)
 /home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
   result = self._query(query)
 [pid: 29624|app: 0|req: 2/4] 218.220.151.212 () {42 vars in 847 bytes} [Fri Feb  1 22:29:52 2019] GET /pw_manager/index/ => generated 27 bytes in 45 msecs (HTTP/2.0 500) 4 headers in 126 bytes (1 switches on core 0)
+Gracefully killing worker 10 (pid: 29624)...
+Gracefully killing worker 9 (pid: 29623)...
+Gracefully killing worker 8 (pid: 29622)...
+Gracefully killing worker 7 (pid: 29621)...
+Gracefully killing worker 6 (pid: 29620)...
+Gracefully killing worker 5 (pid: 29619)...
+Gracefully killing worker 4 (pid: 29618)...
+Gracefully killing worker 3 (pid: 29617)...
+Gracefully killing worker 2 (pid: 29616)...
+Gracefully killing worker 1 (pid: 29615)...
+...gracefully killing workers...
+worker 1 buried after 6 seconds
+worker 2 buried after 6 seconds
+worker 3 buried after 6 seconds
+worker 4 buried after 6 seconds
+worker 5 buried after 6 seconds
+worker 6 buried after 6 seconds
+worker 7 buried after 6 seconds
+worker 8 buried after 6 seconds
+worker 9 buried after 6 seconds
+worker 10 buried after 6 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sat Feb  2 03:15:35 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55eb8bc034b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55eb8bc034b0 pid: 29611 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 29611)
+spawned uWSGI worker 1 (pid: 1826, cores: 1)
+spawned uWSGI worker 2 (pid: 1827, cores: 1)
+spawned uWSGI worker 3 (pid: 1828, cores: 1)
+spawned uWSGI worker 4 (pid: 1829, cores: 1)
+spawned uWSGI worker 5 (pid: 1830, cores: 1)
+spawned uWSGI worker 6 (pid: 1831, cores: 1)
+spawned uWSGI worker 7 (pid: 1832, cores: 1)
+spawned uWSGI worker 8 (pid: 1833, cores: 1)
+spawned uWSGI worker 9 (pid: 1834, cores: 1)
+spawned uWSGI worker 10 (pid: 1835, cores: 1)

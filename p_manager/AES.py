@@ -6,7 +6,10 @@ import base64
 class AESCipher:
     def __init__(self, key, block_size=32):
         self.bs = block_size
-        self.key = key
+        if len(key) >= len(str(block_size)):
+            self.key = key[:block_size]
+        else:
+            self.key = self._pad(key)
 
     def encrypt(self, raw):
         raw = self._pad(raw)

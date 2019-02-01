@@ -1,0 +1,186 @@
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sat Feb  2 03:55:01 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x557cbb26d650
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x557cbb26d650 pid: 2591 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2591)
+spawned uWSGI worker 1 (pid: 2593, cores: 1)
+spawned uWSGI worker 2 (pid: 2594, cores: 1)
+spawned uWSGI worker 3 (pid: 2595, cores: 1)
+spawned uWSGI worker 4 (pid: 2596, cores: 1)
+spawned uWSGI worker 5 (pid: 2597, cores: 1)
+spawned uWSGI worker 6 (pid: 2598, cores: 1)
+spawned uWSGI worker 7 (pid: 2599, cores: 1)
+spawned uWSGI worker 8 (pid: 2600, cores: 1)
+spawned uWSGI worker 9 (pid: 2601, cores: 1)
+spawned uWSGI worker 10 (pid: 2602, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock removed.
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sat Feb  2 03:55:09 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55724d4b4650
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55724d4b4650 pid: 2605 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2605)
+spawned uWSGI worker 1 (pid: 2609, cores: 1)
+spawned uWSGI worker 2 (pid: 2610, cores: 1)
+spawned uWSGI worker 3 (pid: 2611, cores: 1)
+spawned uWSGI worker 4 (pid: 2612, cores: 1)
+spawned uWSGI worker 5 (pid: 2613, cores: 1)
+spawned uWSGI worker 6 (pid: 2614, cores: 1)
+spawned uWSGI worker 7 (pid: 2615, cores: 1)
+spawned uWSGI worker 8 (pid: 2616, cores: 1)
+spawned uWSGI worker 9 (pid: 2617, cores: 1)
+spawned uWSGI worker 10 (pid: 2618, cores: 1)
+nohup: ignoring input and appending output to 'nohup.out'
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sat Feb  2 03:56:12 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5601d06ae640
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5601d06ae640 pid: 2639 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2639)
+spawned uWSGI worker 1 (pid: 2643, cores: 1)
+spawned uWSGI worker 2 (pid: 2644, cores: 1)
+spawned uWSGI worker 3 (pid: 2645, cores: 1)
+spawned uWSGI worker 4 (pid: 2646, cores: 1)
+spawned uWSGI worker 5 (pid: 2647, cores: 1)
+spawned uWSGI worker 6 (pid: 2648, cores: 1)
+spawned uWSGI worker 7 (pid: 2649, cores: 1)
+spawned uWSGI worker 8 (pid: 2650, cores: 1)
+spawned uWSGI worker 9 (pid: 2651, cores: 1)
+spawned uWSGI worker 10 (pid: 2652, cores: 1)
+...brutally killing workers...
+worker 6 buried after 1 seconds
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Sat Feb  2 03:56:32 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562dd261d400
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x562dd261d400 pid: 2605 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2605)
+spawned uWSGI worker 1 (pid: 2659, cores: 1)
+spawned uWSGI worker 2 (pid: 2660, cores: 1)
+spawned uWSGI worker 3 (pid: 2661, cores: 1)
+spawned uWSGI worker 4 (pid: 2662, cores: 1)
+spawned uWSGI worker 5 (pid: 2663, cores: 1)
+spawned uWSGI worker 6 (pid: 2664, cores: 1)
+spawned uWSGI worker 7 (pid: 2665, cores: 1)
+spawned uWSGI worker 8 (pid: 2666, cores: 1)
+spawned uWSGI worker 9 (pid: 2667, cores: 1)
+spawned uWSGI worker 10 (pid: 2668, cores: 1)

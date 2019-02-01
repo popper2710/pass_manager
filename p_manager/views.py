@@ -8,6 +8,7 @@ from django.utils.decorators import method_decorator
 import ulid
 
 from . import manager
+from .master_pass_operation import MasterPassOperator
 from .models import Password
 from .forms import PasswordForm, SignupForm
 
@@ -18,6 +19,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
+            request.session['token'] = MasterPassOperator().master_pass_recorder(request.POST['username'] + request.POST['password1'])
             return redirect('p_manager:index')
     else:
         form = SignupForm()
@@ -29,19 +31,20 @@ class PasswordUpdateView(UpdateView):
     model = Password
     form_class = PasswordForm
     template_name = "p_manager/update.html"
-    master_pass = 'test'
-    operation = manager.DBOperation(master_pass)
 
     def get_queryset(self):
         queryset = super().get_queryset()
         return queryset.filter(pw_user=self.request.user)
 
     def get_context_data(self, **kwargs):
+        crypt_pass = c_pass_extract(self.request)
+        operation = manager.DBOperation(crypt_pass)
+
         context_data = super().get_context_data()
         if self.request.method == 'GET':
             form = context_data['form']
             e_pass = form['pw'].value()
-            d_pass = self.operation.decrypt_pass(e_pass)
+            d_pass = operation.decrypt_pass(e_pass)
             new_form = {'pw': d_pass,
                         'purpose': form['purpose'].value(),
                         'description': form['description'].value()}
@@ -51,7 +54,9 @@ class PasswordUpdateView(UpdateView):
     def form_valid(self, form):
         post = form.save(commit=False)
         post.pw_user = self.request.user
-        post.pw = self.operation.encrypt_pass(post.pw)
+        crypt_pass = c_pass_extract(self.request)
+        operation = manager.DBOperation(crypt_pass)
+        post.pw = operation.encrypt_pass(post.pw)
         post.save()
         return redirect('p_manager:index')
 
@@ -73,9 +78,8 @@ def index(request):
         pw_id = request.POST["del_pw"]
         delete_pw = Password.objects.get(pass_id=pw_id)
         delete_pw.delete()
-
-    master_pass = 'test'
-    operation = manager.DBOperation(master_pass)
+    crypt_pass = c_pass_extract(request)
+    operation = manager.DBOperation(crypt_pass)
     pw_model = Password.objects.filter(pw_user=request.user)
     pw_dict = []
     for i in pw_model:
@@ -98,7 +102,7 @@ def auth_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            request.session['master_pass'] = username + password
+            request.session['token'] = MasterPassOperator().master_pass_recorder(username + password)
             return redirect('p_manager:index')
         else:
             error_message = 'Username or password is invalid.'
@@ -111,7 +115,7 @@ def auth_login(request):
 def auth_logout(request):
     logout(request)
     request.session.flush()
-    return render(request, 'p_manager/login.html')
+    return redirect('p_manager:login')
 
 
 @login_required
@@ -140,8 +144,8 @@ def create_new_password(request):
 def add_pass(request):
     try:
         pass_id = ulid.new()
-        master_pass = 'test'
-        operation = manager.DBOperation(master_pass)
+        crypt_pass = c_pass_extract(request)
+        operation = manager.DBOperation(crypt_pass)
         e_pass = operation.encrypt_pass(request.POST['password'])
         pw_user = request.user
         Password.objects.create(pw_user=pw_user,
@@ -153,3 +157,13 @@ def add_pass(request):
 
     except KeyError:
         return render(request, 'p_manager/add.html')
+
+
+def c_pass_extract(request):
+    token = request.session['token']
+    try:
+        new_token, crypt_pass = MasterPassOperator().master_pass_extractor(pass_info=token)
+    except ValueError:
+        redirect('p_manager:logout')
+    request.session['token'] = new_token
+    return crypt_pass
