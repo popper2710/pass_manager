@@ -81,14 +81,12 @@ def index(request):
     crypt_pass = c_pass_extract(request)
     operation = manager.DBOperation(crypt_pass)
     pw_model = Password.objects.filter(pw_user=request.user)
-    pw_dict = []
-    for i in pw_model:
-        pw_dict.append({
+    pw_dict = [{
             'id': i.pass_id,
             'password': operation.decrypt_pass(i.pw),
             'purpose': i.purpose,
             'description': i.description
-        })
+        } for i in pw_model]
     return render(request, 'p_manager/index.html', {'pw_dict': pw_dict})
 
 
