@@ -1,0 +1,864 @@
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 30 21:03:59 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x559fd8076630
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x559fd8076630 pid: 4444 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 4444)
+spawned uWSGI worker 1 (pid: 4448, cores: 1)
+spawned uWSGI worker 2 (pid: 4449, cores: 1)
+spawned uWSGI worker 3 (pid: 4450, cores: 1)
+spawned uWSGI worker 4 (pid: 4451, cores: 1)
+spawned uWSGI worker 5 (pid: 4452, cores: 1)
+spawned uWSGI worker 6 (pid: 4453, cores: 1)
+spawned uWSGI worker 7 (pid: 4454, cores: 1)
+spawned uWSGI worker 8 (pid: 4455, cores: 1)
+spawned uWSGI worker 9 (pid: 4456, cores: 1)
+spawned uWSGI worker 10 (pid: 4457, cores: 1)
+[pid: 4457|app: 0|req: 1/1] 218.220.151.212 () {38 vars in 575 bytes} [Wed Jan 30 22:22:40 2019] HEAD / => generated 26 bytes in 197 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 4448|app: 0|req: 1/2] 218.220.151.212 () {42 vars in 713 bytes} [Wed Jan 30 22:22:56 2019] GET / => generated 26 bytes in 186 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 4457|app: 0|req: 2/3] 218.220.151.212 () {42 vars in 697 bytes} [Wed Jan 30 22:22:57 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 4448|app: 0|req: 2/4] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 22:23:21 2019] GET / => generated 26 bytes in 10 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 4457|app: 0|req: 3/5] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:23:22 2019] GET /favicon.ico => generated 26 bytes in 10 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 4457|app: 0|req: 4/6] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 22:23:51 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 4448|app: 0|req: 3/7] 218.220.151.212 () {46 vars in 742 bytes} [Wed Jan 30 22:23:52 2019] GET /favicon.ico => generated 26 bytes in 10 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 30 22:24:35 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5582082f0640
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5582082f0640 pid: 6248 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6248)
+spawned uWSGI worker 1 (pid: 6252, cores: 1)
+spawned uWSGI worker 2 (pid: 6253, cores: 1)
+spawned uWSGI worker 3 (pid: 6254, cores: 1)
+spawned uWSGI worker 4 (pid: 6255, cores: 1)
+spawned uWSGI worker 5 (pid: 6256, cores: 1)
+spawned uWSGI worker 6 (pid: 6257, cores: 1)
+spawned uWSGI worker 7 (pid: 6258, cores: 1)
+spawned uWSGI worker 8 (pid: 6259, cores: 1)
+spawned uWSGI worker 9 (pid: 6260, cores: 1)
+spawned uWSGI worker 10 (pid: 6261, cores: 1)
+[pid: 6254|app: 0|req: 1/1] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 22:24:40 2019] GET / => generated 26 bytes in 183 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 1/2] 218.220.151.212 () {46 vars in 742 bytes} [Wed Jan 30 22:24:41 2019] GET /favicon.ico => generated 26 bytes in 190 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 1/3] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 22:24:45 2019] GET / => generated 26 bytes in 190 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 2/4] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:24:45 2019] GET /favicon.ico => generated 26 bytes in 11 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 3/5] 218.220.151.212 () {44 vars in 877 bytes} [Wed Jan 30 22:27:06 2019] GET / => generated 74 bytes in 5 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 2/6] 218.220.151.212 () {44 vars in 857 bytes} [Wed Jan 30 22:27:06 2019] GET /favicon.ico => generated 85 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 4/7] 218.220.151.212 () {44 vars in 909 bytes} [Wed Jan 30 22:27:22 2019] GET /pw_manager/index => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 123 bytes (2 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 6260|app: 0|req: 1/8] 218.220.151.212 () {44 vars in 911 bytes} [Wed Jan 30 22:27:22 2019] GET /pw_manager/index/ => generated 0 bytes in 265 msecs (HTTP/1.1 302) 5 headers in 249 bytes (2 switches on core 0)
+[pid: 6252|app: 0|req: 5/9] 218.220.151.212 () {44 vars in 914 bytes} [Wed Jan 30 22:27:22 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 13 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 3/10] 218.220.151.212 () {42 vars in 741 bytes} [Wed Jan 30 22:28:06 2019] GET /pw_manager/index => generated 26 bytes in 11 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6252|app: 0|req: 6/11] 218.220.151.212 () {42 vars in 705 bytes} [Wed Jan 30 22:28:06 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 4/12] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:28:57 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6252|app: 0|req: 7/13] 218.220.151.212 () {42 vars in 705 bytes} [Wed Jan 30 22:28:57 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 5/14] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:29:00 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 8/15] 218.220.151.212 () {42 vars in 705 bytes} [Wed Jan 30 22:29:00 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 9/16] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:30:51 2019] GET /pw_manager/index => generated 26 bytes in 12 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 6/17] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:30:52 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 10/18] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:30:52 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 7/19] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:30:53 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 11/20] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:30:53 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 8/21] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:30:53 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 12/22] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:30:53 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 9/23] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:30:53 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 13/24] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:30:56 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 10/25] 218.220.151.212 () {42 vars in 705 bytes} [Wed Jan 30 22:30:56 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 14/26] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 22:31:04 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 11/27] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:31:04 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 15/28] 218.220.151.212 () {44 vars in 865 bytes} [Wed Jan 30 22:32:03 2019] GET /pw_manager/index => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 123 bytes (2 switches on core 0)
+[pid: 6254|app: 0|req: 2/29] 218.220.151.212 () {44 vars in 867 bytes} [Wed Jan 30 22:32:03 2019] GET /pw_manager/index/ => generated 0 bytes in 11 msecs (HTTP/1.1 302) 5 headers in 178 bytes (2 switches on core 0)
+[pid: 6252|app: 0|req: 16/30] 218.220.151.212 () {44 vars in 914 bytes} [Wed Jan 30 22:32:03 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 17/31] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 22:39:43 2019] GET / => generated 26 bytes in 10 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 12/32] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:39:44 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 18/33] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:39:51 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6261|app: 0|req: 13/34] 218.220.151.212 () {42 vars in 741 bytes} [Wed Jan 30 22:40:02 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 19/35] 218.220.151.212 () {42 vars in 705 bytes} [Wed Jan 30 22:40:02 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 20/36] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 22:43:31 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 14/37] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:43:32 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 21/38] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 22:44:14 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 15/39] 218.220.151.212 () {46 vars in 742 bytes} [Wed Jan 30 22:44:14 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 22/40] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 22:46:26 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 16/41] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 22:46:26 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 23/42] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 22:47:18 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 17/43] 218.220.151.212 () {46 vars in 742 bytes} [Wed Jan 30 22:47:18 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6252|app: 0|req: 24/44] 218.220.151.212 () {40 vars in 577 bytes} [Wed Jan 30 22:47:40 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 18/45] 218.220.151.212 () {40 vars in 609 bytes} [Wed Jan 30 22:47:57 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6252|app: 0|req: 25/46] 218.220.151.212 () {42 vars in 741 bytes} [Wed Jan 30 22:48:15 2019] GET /pw_manager/login => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6261|app: 0|req: 19/47] 218.220.151.212 () {42 vars in 705 bytes} [Wed Jan 30 22:48:15 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Wed Jan 30 22:50:08 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55e60d1a0640
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55e60d1a0640 pid: 6543 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 6543)
+spawned uWSGI worker 1 (pid: 6547, cores: 1)
+spawned uWSGI worker 2 (pid: 6548, cores: 1)
+spawned uWSGI worker 3 (pid: 6549, cores: 1)
+spawned uWSGI worker 4 (pid: 6550, cores: 1)
+spawned uWSGI worker 5 (pid: 6551, cores: 1)
+spawned uWSGI worker 6 (pid: 6552, cores: 1)
+spawned uWSGI worker 7 (pid: 6553, cores: 1)
+spawned uWSGI worker 8 (pid: 6554, cores: 1)
+spawned uWSGI worker 9 (pid: 6555, cores: 1)
+spawned uWSGI worker 10 (pid: 6556, cores: 1)
+[pid: 6556|app: 0|req: 1/1] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:50:18 2019] GET /pw_manager/login => generated 26 bytes in 203 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 1/2] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:50:19 2019] GET /favicon.ico => generated 26 bytes in 201 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 2/3] 218.220.151.212 () {44 vars in 757 bytes} [Wed Jan 30 22:53:04 2019] GET / => generated 74 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 2/4] 218.220.151.212 () {44 vars in 789 bytes} [Wed Jan 30 22:53:13 2019] GET /pw_manager/index => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 123 bytes (2 switches on core 0)
+[pid: 6554|app: 0|req: 1/5] 218.220.151.212 () {44 vars in 791 bytes} [Wed Jan 30 22:53:13 2019] GET /pw_manager/index/ => generated 0 bytes in 180 msecs (HTTP/1.1 302) 5 headers in 178 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 3/6] 218.220.151.212 () {44 vars in 838 bytes} [Wed Jan 30 22:53:13 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 15 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+Wed Jan 30 22:56:06 2019 - *** PAUSE (press start to resume, if you do not have a joypad send SIGTSTP) ***
+Wed Jan 30 22:56:06 2019 - *** worker 7 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 1 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 2 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 3 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 4 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 6 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 5 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 8 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 9 suspended ***
+Wed Jan 30 22:56:06 2019 - *** worker 10 suspended ***
+Wed Jan 30 22:56:09 2019 - *** (SIGTSTP received) resuming workers ***
+Wed Jan 30 22:56:09 2019 - *** worker 3 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 1 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 9 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 10 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 8 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 5 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 6 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 4 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 2 resumed ***
+Wed Jan 30 22:56:09 2019 - *** worker 7 resumed ***
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock changed inode. Skip removal
+[pid: 6556|app: 0|req: 4/7] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:58:11 2019] GET /pw_manager/index => generated 26 bytes in 39 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 3/8] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:58:11 2019] GET /favicon.ico => generated 26 bytes in 11 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 5/9] 218.220.151.212 () {44 vars in 772 bytes} [Wed Jan 30 22:58:14 2019] GET /pw_manager/index => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6555|app: 0|req: 4/10] 218.220.151.212 () {46 vars in 758 bytes} [Wed Jan 30 22:58:14 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 6/11] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 23:01:32 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 5/12] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 23:01:32 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 7/13] 218.220.151.212 () {38 vars in 575 bytes} [Wed Jan 30 23:02:16 2019] HEAD / => generated 26 bytes in 10 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 6/14] 218.220.151.212 () {42 vars in 713 bytes} [Wed Jan 30 23:02:26 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 8/15] 218.220.151.212 () {42 vars in 697 bytes} [Wed Jan 30 23:02:26 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6555|app: 0|req: 7/16] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 23:02:32 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 9/17] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 23:02:33 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 10/18] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 23:04:04 2019] GET / => generated 26 bytes in 12 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 8/19] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 23:04:04 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 11/20] 218.220.151.212 () {44 vars in 740 bytes} [Wed Jan 30 23:09:43 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 9/21] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 23:09:43 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 12/22] 218.220.151.212 () {44 vars in 833 bytes} [Wed Jan 30 23:12:19 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 13/23] 34.214.101.254 () {34 vars in 423 bytes} [Wed Jan 30 23:13:46 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 14/24] 218.220.151.212 () {44 vars in 833 bytes} [Wed Jan 30 23:28:43 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 15/25] 218.220.151.212 () {42 vars in 709 bytes} [Wed Jan 30 23:35:47 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 10/26] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 23:35:47 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 16/27] 218.220.151.212 () {44 vars in 733 bytes} [Wed Jan 30 23:51:58 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 11/28] 218.220.151.212 () {42 vars in 689 bytes} [Wed Jan 30 23:52:02 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 17/29] 218.220.151.212 () {44 vars in 833 bytes} [Wed Jan 30 23:53:31 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 12/30] 218.220.151.212 () {44 vars in 865 bytes} [Wed Jan 30 23:53:38 2019] GET /pw_manager/index => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 123 bytes (2 switches on core 0)
+[pid: 6550|app: 0|req: 1/31] 218.220.151.212 () {44 vars in 867 bytes} [Wed Jan 30 23:53:38 2019] GET /pw_manager/index/ => generated 0 bytes in 328 msecs (HTTP/1.1 302) 5 headers in 178 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 18/32] 218.220.151.212 () {44 vars in 914 bytes} [Wed Jan 30 23:53:38 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 2 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 19/33] 218.220.151.212 () {44 vars in 740 bytes} [Thu Jan 31 00:01:13 2019] GET / => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 13/34] 218.220.151.212 () {42 vars in 689 bytes} [Thu Jan 31 00:01:13 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 20/35] 218.220.151.212 () {44 vars in 772 bytes} [Thu Jan 31 00:03:55 2019] GET /pw_manager/index => generated 26 bytes in 12 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 14/36] 218.220.151.212 () {42 vars in 705 bytes} [Thu Jan 31 00:03:55 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 21/37] 218.220.151.212 () {42 vars in 731 bytes} [Thu Jan 31 00:08:44 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 15/38] 218.220.151.212 () {42 vars in 700 bytes} [Thu Jan 31 00:08:45 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 6556|app: 0|req: 22/39] 218.220.151.212 () {42 vars in 705 bytes} [Thu Jan 31 00:10:09 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 23/40] 218.220.151.212 () {44 vars in 916 bytes} [Thu Jan 31 00:18:53 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 4 msecs (HTTP/2.0 200) 5 headers in 292 bytes (2 switches on core 0)
+[pid: 6555|app: 0|req: 16/41] 218.220.151.212 () {42 vars in 711 bytes} [Thu Jan 31 00:18:59 2019] GET / => generated 26 bytes in 9 msecs (HTTP/2.0 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 6556|app: 0|req: 24/42] 218.220.151.212 () {40 vars in 660 bytes} [Thu Jan 31 00:18:59 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/2.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 00:19:19 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55cfca979640
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55cfca979640 pid: 7729 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7729)
+spawned uWSGI worker 1 (pid: 7737, cores: 1)
+spawned uWSGI worker 2 (pid: 7738, cores: 1)
+spawned uWSGI worker 3 (pid: 7739, cores: 1)
+spawned uWSGI worker 4 (pid: 7740, cores: 1)
+spawned uWSGI worker 5 (pid: 7741, cores: 1)
+spawned uWSGI worker 6 (pid: 7742, cores: 1)
+spawned uWSGI worker 7 (pid: 7743, cores: 1)
+spawned uWSGI worker 8 (pid: 7744, cores: 1)
+spawned uWSGI worker 9 (pid: 7745, cores: 1)
+spawned uWSGI worker 10 (pid: 7746, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM WARNING: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock changed inode. Skip removal
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock removed.
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 00:20:06 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b4d1216640
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55b4d1216640 pid: 7755 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7755)
+spawned uWSGI worker 1 (pid: 7759, cores: 1)
+spawned uWSGI worker 2 (pid: 7760, cores: 1)
+spawned uWSGI worker 3 (pid: 7761, cores: 1)
+spawned uWSGI worker 4 (pid: 7762, cores: 1)
+spawned uWSGI worker 5 (pid: 7763, cores: 1)
+spawned uWSGI worker 6 (pid: 7764, cores: 1)
+spawned uWSGI worker 7 (pid: 7765, cores: 1)
+spawned uWSGI worker 8 (pid: 7766, cores: 1)
+spawned uWSGI worker 9 (pid: 7767, cores: 1)
+spawned uWSGI worker 10 (pid: 7768, cores: 1)
+[pid: 7760|app: 0|req: 1/1] 218.220.151.212 () {42 vars in 711 bytes} [Thu Jan 31 00:20:09 2019] GET / => generated 26 bytes in 361 msecs (HTTP/2.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 7767|app: 0|req: 1/2] 218.220.151.212 () {44 vars in 713 bytes} [Thu Jan 31 00:20:10 2019] GET /favicon.ico => generated 26 bytes in 189 msecs (HTTP/2.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 7768|app: 0|req: 1/3] 218.220.151.212 () {42 vars in 711 bytes} [Thu Jan 31 00:20:22 2019] GET / => generated 26 bytes in 189 msecs (HTTP/2.0 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 7767|app: 0|req: 2/4] 218.220.151.212 () {44 vars in 713 bytes} [Thu Jan 31 00:20:22 2019] GET /favicon.ico => generated 26 bytes in 11 msecs (HTTP/2.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 7768|app: 0|req: 2/5] 218.220.151.212 () {40 vars in 704 bytes} [Thu Jan 31 00:20:31 2019] GET /popper/index => generated 26 bytes in 11 msecs (HTTP/2.0 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 7767|app: 0|req: 3/6] 218.220.151.212 () {40 vars in 672 bytes} [Thu Jan 31 00:20:32 2019] GET /favicon.ico => generated 26 bytes in 9 msecs (HTTP/2.0 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 7768|app: 0|req: 3/7] 218.220.151.212 () {42 vars in 828 bytes} [Thu Jan 31 00:21:34 2019] GET /popper/index => generated 86 bytes in 5 msecs (HTTP/2.0 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 7767|app: 0|req: 4/8] 218.220.151.212 () {42 vars in 836 bytes} [Thu Jan 31 00:21:45 2019] GET /pw_manager/index => generated 0 bytes in 1 msecs (HTTP/2.0 301) 3 headers in 123 bytes (2 switches on core 0)
+[pid: 7766|app: 0|req: 1/9] 218.220.151.212 () {42 vars in 838 bytes} [Thu Jan 31 00:21:45 2019] GET /pw_manager/index/ => generated 0 bytes in 158 msecs (HTTP/2.0 302) 5 headers in 178 bytes (2 switches on core 0)
+[pid: 7767|app: 0|req: 5/10] 218.220.151.212 () {42 vars in 885 bytes} [Thu Jan 31 00:21:46 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 15 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 00:29:55 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55cbe854d6e0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55cbe854d6e0 pid: 7870 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7870)
+spawned uWSGI worker 1 (pid: 7874, cores: 1)
+spawned uWSGI worker 2 (pid: 7875, cores: 1)
+spawned uWSGI worker 3 (pid: 7876, cores: 1)
+spawned uWSGI worker 4 (pid: 7877, cores: 1)
+spawned uWSGI worker 5 (pid: 7878, cores: 1)
+spawned uWSGI worker 6 (pid: 7879, cores: 1)
+spawned uWSGI worker 7 (pid: 7880, cores: 1)
+spawned uWSGI worker 8 (pid: 7881, cores: 1)
+spawned uWSGI worker 9 (pid: 7882, cores: 1)
+spawned uWSGI worker 10 (pid: 7883, cores: 1)
+Thu Jan 31 00:30:17 2019 - *** PAUSE (press start to resume, if you do not have a joypad send SIGTSTP) ***
+Thu Jan 31 00:30:17 2019 - *** worker 2 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 8 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 4 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 1 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 7 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 3 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 6 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 5 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 9 suspended ***
+Thu Jan 31 00:30:17 2019 - *** worker 10 suspended ***
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock removed.
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 2 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+goodbye to uWSGI.
+unlink(): No such file or directory [core/uwsgi.c line 1659]
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 00:32:03 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5613e0676660
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5613e0676660 pid: 7938 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 7938)
+spawned uWSGI worker 1 (pid: 7940, cores: 1)
+spawned uWSGI worker 2 (pid: 7941, cores: 1)
+spawned uWSGI worker 3 (pid: 7942, cores: 1)
+spawned uWSGI worker 4 (pid: 7943, cores: 1)
+spawned uWSGI worker 5 (pid: 7944, cores: 1)
+spawned uWSGI worker 6 (pid: 7945, cores: 1)
+spawned uWSGI worker 7 (pid: 7946, cores: 1)
+spawned uWSGI worker 8 (pid: 7947, cores: 1)
+spawned uWSGI worker 9 (pid: 7948, cores: 1)
+spawned uWSGI worker 10 (pid: 7949, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+Thu Jan 31 00:32:10 2019 - *** PAUSE (press start to resume, if you do not have a joypad send SIGTSTP) ***
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock removed.
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 03:23:41 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5591bac766e0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x5591bac766e0 pid: 9269 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9269)
+spawned uWSGI worker 1 (pid: 9271, cores: 1)
+spawned uWSGI worker 2 (pid: 9272, cores: 1)
+spawned uWSGI worker 3 (pid: 9273, cores: 1)
+spawned uWSGI worker 4 (pid: 9274, cores: 1)
+spawned uWSGI worker 5 (pid: 9275, cores: 1)
+spawned uWSGI worker 6 (pid: 9276, cores: 1)
+spawned uWSGI worker 7 (pid: 9277, cores: 1)
+spawned uWSGI worker 8 (pid: 9278, cores: 1)
+spawned uWSGI worker 9 (pid: 9279, cores: 1)
+spawned uWSGI worker 10 (pid: 9280, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 9 buried after 1 seconds
+worker 10 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: unix socket /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock removed.
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 03:23:55 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55b1468ba6e0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55b1468ba6e0 pid: 9283 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 9283)
+spawned uWSGI worker 1 (pid: 9287, cores: 1)
+spawned uWSGI worker 2 (pid: 9288, cores: 1)
+spawned uWSGI worker 3 (pid: 9289, cores: 1)
+spawned uWSGI worker 4 (pid: 9290, cores: 1)
+spawned uWSGI worker 5 (pid: 9291, cores: 1)
+spawned uWSGI worker 6 (pid: 9292, cores: 1)
+spawned uWSGI worker 7 (pid: 9293, cores: 1)
+spawned uWSGI worker 8 (pid: 9294, cores: 1)
+spawned uWSGI worker 9 (pid: 9295, cores: 1)
+spawned uWSGI worker 10 (pid: 9296, cores: 1)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 9287|app: 0|req: 1/1] 218.220.151.212 () {46 vars in 985 bytes} [Thu Jan 31 03:24:09 2019] GET /pw_manager/index/ => generated 9921 bytes in 2082 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 9296|app: 0|req: 1/2] 218.220.151.212 () {52 vars in 1115 bytes} [Thu Jan 31 03:25:20 2019] POST /pw_manager/login/?next=/pw_manager/index/ => generated 0 bytes in 287 msecs (HTTP/2.0 302) 7 headers in 411 bytes (2 switches on core 0)
+[pid: 9287|app: 0|req: 2/3] 218.220.151.212 () {46 vars in 958 bytes} [Thu Jan 31 03:25:21 2019] GET /pw_manager/index/ => generated 9921 bytes in 1785 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9296|app: 0|req: 2/4] 218.220.151.212 () {44 vars in 915 bytes} [Thu Jan 31 03:25:30 2019] GET /pw_manager/change_user/ => generated 5143 bytes in 31 msecs (HTTP/2.0 200) 5 headers in 292 bytes (2 switches on core 0)
+[pid: 9287|app: 0|req: 3/5] 218.220.151.212 () {44 vars in 915 bytes} [Thu Jan 31 03:25:37 2019] GET /pw_manager/change_user/ => generated 5143 bytes in 14 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9296|app: 0|req: 3/6] 218.220.151.212 () {42 vars in 894 bytes} [Thu Jan 31 03:36:18 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 0 bytes in 5 msecs (HTTP/2.0 302) 5 headers in 154 bytes (2 switches on core 0)
+[pid: 9287|app: 0|req: 4/7] 218.220.151.212 () {42 vars in 847 bytes} [Thu Jan 31 03:36:18 2019] GET /pw_manager/index/ => generated 9921 bytes in 1800 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9296|app: 0|req: 4/8] 218.220.151.212 () {44 vars in 878 bytes} [Thu Jan 31 03:36:25 2019] GET /pw_manager/index/ => generated 10122 bytes in 1817 msecs (HTTP/2.0 200) 5 headers in 293 bytes (2 switches on core 0)
+[pid: 9287|app: 0|req: 5/9] 218.220.151.212 () {44 vars in 899 bytes} [Thu Jan 31 03:36:29 2019] GET /pw_manager/add/ => generated 5617 bytes in 9 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9296|app: 0|req: 5/10] 218.220.151.212 () {44 vars in 913 bytes} [Thu Jan 31 03:36:38 2019] GET /pw_manager/change_user/ => generated 5143 bytes in 9 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9287|app: 0|req: 6/11] 218.220.151.212 () {44 vars in 911 bytes} [Thu Jan 31 03:36:41 2019] GET /pw_manager/logout/ => generated 5010 bytes in 20 msecs (HTTP/2.0 200) 6 headers in 377 bytes (1 switches on core 0)
+[pid: 9295|app: 0|req: 1/12] 218.220.151.212 () {44 vars in 862 bytes} [Thu Jan 31 03:36:44 2019] GET /pw_manager/signup/ => generated 7058 bytes in 188 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+Gracefully killing worker 10 (pid: 9296)...
+Gracefully killing worker 9 (pid: 9295)...
+Gracefully killing worker 8 (pid: 9294)...
+Gracefully killing worker 7 (pid: 9293)...
+Gracefully killing worker 6 (pid: 9292)...
+Gracefully killing worker 5 (pid: 9291)...
+Gracefully killing worker 4 (pid: 9290)...
+Gracefully killing worker 3 (pid: 9289)...
+Gracefully killing worker 2 (pid: 9288)...
+Gracefully killing worker 1 (pid: 9287)...
+...gracefully killing workers...
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 8 buried after 1 seconds
+worker 1 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 03:39:58 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x565020c4f4b0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x565020c4f4b0 pid: 9283 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 9283)
+spawned uWSGI worker 1 (pid: 9488, cores: 1)
+spawned uWSGI worker 2 (pid: 9489, cores: 1)
+spawned uWSGI worker 3 (pid: 9490, cores: 1)
+spawned uWSGI worker 4 (pid: 9491, cores: 1)
+spawned uWSGI worker 5 (pid: 9492, cores: 1)
+spawned uWSGI worker 6 (pid: 9493, cores: 1)
+spawned uWSGI worker 7 (pid: 9494, cores: 1)
+spawned uWSGI worker 8 (pid: 9495, cores: 1)
+spawned uWSGI worker 9 (pid: 9496, cores: 1)
+spawned uWSGI worker 10 (pid: 9497, cores: 1)
+[pid: 9491|app: 0|req: 1/1] 218.220.151.212 () {44 vars in 836 bytes} [Thu Jan 31 03:39:59 2019] GET /pw_manager/signup/ => generated 7058 bytes in 187 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+Gracefully killing worker 1 (pid: 4448)...
+Gracefully killing worker 10 (pid: 4457)...
+...gracefully killing workers...
+Gracefully killing worker 5 (pid: 4452)...
+Gracefully killing worker 3 (pid: 4450)...
+Gracefully killing worker 4 (pid: 4451)...
+Gracefully killing worker 8 (pid: 4455)...
+Gracefully killing worker 6 (pid: 4453)...
+Gracefully killing worker 7 (pid: 4454)...
+Gracefully killing worker 2 (pid: 4449)...
+Gracefully killing worker 9 (pid: 4456)...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock)
+running /home/ubuntu/.local/bin/uwsgi
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Thu Jan 31 04:07:43 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x5620e1cb1600
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x5620e1cb1600 pid: 4444 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 4444)
+spawned uWSGI worker 1 (pid: 9661, cores: 1)
+spawned uWSGI worker 2 (pid: 9662, cores: 1)
+spawned uWSGI worker 3 (pid: 9663, cores: 1)
+spawned uWSGI worker 4 (pid: 9664, cores: 1)
+spawned uWSGI worker 5 (pid: 9665, cores: 1)
+spawned uWSGI worker 6 (pid: 9666, cores: 1)
+spawned uWSGI worker 7 (pid: 9667, cores: 1)
+spawned uWSGI worker 8 (pid: 9668, cores: 1)
+spawned uWSGI worker 9 (pid: 9669, cores: 1)
+spawned uWSGI worker 10 (pid: 9670, cores: 1)
+[pid: 9497|app: 0|req: 1/2] 37.49.231.48 () {38 vars in 576 bytes} [Thu Jan 31 23:32:44 2019] GET / => generated 74 bytes in 262 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 9496|app: 0|req: 1/3] 37.49.231.48 () {40 vars in 627 bytes} [Thu Jan 31 23:32:45 2019] GET /HNAP1/ => generated 80 bytes in 175 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 2/4] 128.1.84.138 () {36 vars in 532 bytes} [Fri Feb  1 00:17:32 2019] GET /cgi-bin/config.exp => generated 92 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 9497|app: 0|req: 3/5] 216.218.206.67 () {30 vars in 323 bytes} [Fri Feb  1 01:49:29 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 9497|app: 0|req: 4/6] 104.248.146.28 () {32 vars in 370 bytes} [Fri Feb  1 02:35:19 2019] GET /api/v1/time => generated 85 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 9497|app: 0|req: 5/7] 171.67.70.37 () {36 vars in 407 bytes} [Fri Feb  1 15:41:06 2019] GET / => generated 74 bytes in 1 msecs (HTTP/1.1 404) 3 headers in 100 bytes (2 switches on core 0)
+[pid: 9497|app: 0|req: 6/8] 218.220.151.212 () {40 vars in 716 bytes} [Fri Feb  1 22:25:13 2019] GET /pw_manager/signup/ => generated 7058 bytes in 88 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 7/9] 218.220.151.212 () {42 vars in 767 bytes} [Fri Feb  1 22:25:14 2019] GET /favicon.ico => generated 85 bytes in 2 msecs (HTTP/2.0 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 8/10] 218.220.151.212 () {44 vars in 836 bytes} [Fri Feb  1 22:25:17 2019] GET /pw_manager/signup/ => generated 7058 bytes in 5 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 9/11] 218.220.151.212 () {44 vars in 836 bytes} [Fri Feb  1 22:25:20 2019] GET /pw_manager/signup/ => generated 7058 bytes in 5 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 10/12] 218.220.151.212 () {44 vars in 860 bytes} [Fri Feb  1 22:25:22 2019] GET /pw_manager/index/ => generated 0 bytes in 6 msecs (HTTP/2.0 302) 5 headers in 178 bytes (1 switches on core 0)
+[pid: 9496|app: 0|req: 2/13] 218.220.151.212 () {44 vars in 907 bytes} [Fri Feb  1 22:25:23 2019] GET /pw_manager/login/?next=/pw_manager/index/ => generated 5010 bytes in 14 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 9497|app: 0|req: 11/14] 218.220.151.212 () {52 vars in 1115 bytes} [Fri Feb  1 22:25:31 2019] POST /pw_manager/login/?next=/pw_manager/index/ => generated 0 bytes in 202 msecs (HTTP/2.0 302) 7 headers in 411 bytes (1 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 9496|app: 0|req: 3/15] 218.220.151.212 () {46 vars in 958 bytes} [Fri Feb  1 22:25:31 2019] GET /pw_manager/index/ => generated 6265 bytes in 27 msecs (HTTP/2.0 200) 4 headers in 124 bytes (2 switches on core 0)
+[pid: 9497|app: 0|req: 12/16] 218.220.151.212 () {44 vars in 903 bytes} [Fri Feb  1 22:25:38 2019] GET /pw_manager/index/ => generated 6265 bytes in 16 msecs (HTTP/2.0 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 13/17] 218.220.151.212 () {44 vars in 903 bytes} [Fri Feb  1 22:25:39 2019] GET /pw_manager/index/ => generated 6265 bytes in 15 msecs (HTTP/2.0 200) 4 headers in 124 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 14/18] 218.220.151.212 () {44 vars in 905 bytes} [Fri Feb  1 22:25:41 2019] GET /pw_manager/create/ => generated 6666 bytes in 14 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+ty1qQJl~#\bU:}*y
+[pid: 9497|app: 0|req: 15/19] 218.220.151.212 () {52 vars in 1091 bytes} [Fri Feb  1 22:25:43 2019] POST /pw_manager/create/ => generated 5633 bytes in 17 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (1300, "Invalid utf8mb4 character string: 'F0A694'")
+  result = self._query(query)
+Success to create new key!!
+[pid: 9497|app: 0|req: 16/20] 218.220.151.212 () {52 vars in 1085 bytes} [Fri Feb  1 22:25:44 2019] POST /pw_manager/add/ => generated 0 bytes in 1037 msecs (HTTP/2.0 302) 5 headers in 154 bytes (1 switches on core 0)
+[pid: 9496|app: 0|req: 4/21] 218.220.151.212 () {46 vars in 935 bytes} [Fri Feb  1 22:25:45 2019] GET /pw_manager/index/ => generated 8184 bytes in 914 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 17/22] 218.220.151.212 () {44 vars in 905 bytes} [Fri Feb  1 22:25:51 2019] GET /pw_manager/create/ => generated 6666 bytes in 9 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+l]KLVDlzX:P\^`.`v0yV=b.5[wa"TO"W?R<j!eXz]f>
+[pid: 9497|app: 0|req: 18/23] 218.220.151.212 () {52 vars in 1091 bytes} [Fri Feb  1 22:25:57 2019] POST /pw_manager/create/ => generated 5676 bytes in 8 msecs (HTTP/2.0 200) 5 headers in 292 bytes (1 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (1300, "Invalid utf8mb4 character string: '96F08A'")
+  result = self._query(query)
+Success to create new key!!
+[pid: 9497|app: 0|req: 19/24] 218.220.151.212 () {52 vars in 1085 bytes} [Fri Feb  1 22:26:03 2019] POST /pw_manager/add/ => generated 0 bytes in 1035 msecs (HTTP/2.0 302) 5 headers in 154 bytes (1 switches on core 0)
+[pid: 9497|app: 0|req: 20/25] 218.220.151.212 () {46 vars in 935 bytes} [Fri Feb  1 22:26:04 2019] GET /pw_manager/index/ => generated 10153 bytes in 1944 msecs (HTTP/2.0 200) 5 headers in 293 bytes (1 switches on core 0)
+[uWSGI] getting INI configuration from pass_manager_uwsgi.ini
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Feb  1 22:29:31 2019] ***
+compiled with version: 7.3.0 on 30 January 2019 08:54:31
+os: Linux-4.15.0-1031-aws #33-Ubuntu SMP Fri Dec 7 09:32:27 UTC 2018
+nodename: ip-10-0-1-20
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/OneDrive/Pycharm/pass_manager
+detected binary path: /home/ubuntu/.local/bin/uwsgi
+chdir() to /home/ubuntu/OneDrive/Pycharm/pass_manager
+your processes number limit is 3841
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/OneDrive/Pycharm/pass_manager/pass_manager.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+Set PythonHome to /usr
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x562fa3f776e0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 802120 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+3.6.7 (default, Oct 22 2018, 11:32:17) 
+[GCC 8.2.0]
+/usr
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x562fa3f776e0 pid: 29611 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 29611)
+spawned uWSGI worker 1 (pid: 29615, cores: 1)
+spawned uWSGI worker 2 (pid: 29616, cores: 1)
+spawned uWSGI worker 3 (pid: 29617, cores: 1)
+spawned uWSGI worker 4 (pid: 29618, cores: 1)
+spawned uWSGI worker 5 (pid: 29619, cores: 1)
+spawned uWSGI worker 6 (pid: 29620, cores: 1)
+spawned uWSGI worker 7 (pid: 29621, cores: 1)
+spawned uWSGI worker 8 (pid: 29622, cores: 1)
+spawned uWSGI worker 9 (pid: 29623, cores: 1)
+spawned uWSGI worker 10 (pid: 29624, cores: 1)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 29618|app: 0|req: 1/1] 218.220.151.212 () {44 vars in 903 bytes} [Fri Feb  1 22:29:34 2019] GET /pw_manager/index/ => generated 27 bytes in 281 msecs (HTTP/2.0 500) 4 headers in 126 bytes (2 switches on core 0)
+[pid: 29624|app: 0|req: 1/2] 218.220.151.212 () {42 vars in 813 bytes} [Fri Feb  1 22:29:43 2019] GET / => generated 74 bytes in 122 msecs (HTTP/2.0 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 29623|app: 0|req: 1/3] 218.220.151.212 () {42 vars in 845 bytes} [Fri Feb  1 22:29:52 2019] GET /pw_manager/index => generated 0 bytes in 107 msecs (HTTP/2.0 301) 3 headers in 123 bytes (1 switches on core 0)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3135, "'NO_ZERO_DATE', 'NO_ZERO_IN_DATE' and 'ERROR_FOR_DIVISION_BY_ZERO' sql modes should be used with strict mode. They will be merged with strict mode in a future release.")
+  result = self._query(query)
+/home/ubuntu/.local/lib/python3.6/site-packages/pymysql/cursors.py:170: Warning: (3090, "Changing sql mode 'NO_AUTO_CREATE_USER' is deprecated. It will be removed in a future release.")
+  result = self._query(query)
+[pid: 29624|app: 0|req: 2/4] 218.220.151.212 () {42 vars in 847 bytes} [Fri Feb  1 22:29:52 2019] GET /pw_manager/index/ => generated 27 bytes in 45 msecs (HTTP/2.0 500) 4 headers in 126 bytes (1 switches on core 0)
