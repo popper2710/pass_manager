@@ -8,7 +8,6 @@ from django.utils.decorators import method_decorator
 import ulid
 
 from . import manager
-from .master_pass_operation import MasterPassOperator
 from .models import Password
 from .forms import PasswordForm, SignupForm
 
@@ -19,7 +18,7 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            request.session['token'] = MasterPassOperator().master_pass_recorder(request.POST['username'] + request.POST['password1'])
+            request.session['master_pass'] = request.POST['username'] + request.POST['password1']
             return redirect('p_manager:index')
     else:
         form = SignupForm()
@@ -37,8 +36,8 @@ class PasswordUpdateView(UpdateView):
         return queryset.filter(pw_user=self.request.user)
 
     def get_context_data(self, **kwargs):
-        crypt_pass = c_pass_extract(self.request)
-        operation = manager.DBOperation(crypt_pass)
+        master_pass = self.request.session['master_pass']
+        operation = manager.DBOperation(master_pass)
 
         context_data = super().get_context_data()
         if self.request.method == 'GET':
@@ -53,11 +52,23 @@ class PasswordUpdateView(UpdateView):
 
     def form_valid(self, form):
         post = form.save(commit=False)
+
+        pw_dict = self.request.session['pw_dict']
+        pk = self.kwargs['pk']
+        for num, pw in enumerate(pw_dict):
+            if pw['id'] == pk:
+                pw_dict[num] = {'id': pk,
+                                'password': post.pw,
+                                'purpose': post.purpose,
+                                'description': post.description}
+        self.request.session['pw_dict'] = pw_dict
+
         post.pw_user = self.request.user
-        crypt_pass = c_pass_extract(self.request)
-        operation = manager.DBOperation(crypt_pass)
+        master_pass = self.request.session['master_pass']
+        operation = manager.DBOperation(master_pass)
         post.pw = operation.encrypt_pass(post.pw)
         post.save()
+
         return redirect('p_manager:index')
 
 
@@ -74,19 +85,40 @@ class UserUpdateView(UpdateView):
 
 @login_required
 def index(request):
+    try:
+        pw_dict = request.session['pw_dict']
+    except KeyError:
+        pw_dict = None
+
     if request.method == 'POST':
-        pw_id = request.POST["del_pw"]
+        try:
+            pw_id = request.POST["del_pw"]
+        except KeyError:
+            return redirect('p_manager:index')
+
         delete_pw = Password.objects.get(pass_id=pw_id)
         delete_pw.delete()
-    crypt_pass = c_pass_extract(request)
-    operation = manager.DBOperation(crypt_pass)
+
+        for num, pw in enumerate(pw_dict):
+            print(pw['id'])
+            if pw['id'] == pw_id:
+                pw_dict.pop(num)
+                print('Delete Success')
+        request.session['pw_dict'] = pw_dict
+
+    master_pass = request.session['master_pass']
+    operation = manager.DBOperation(master_pass)
     pw_model = Password.objects.filter(pw_user=request.user)
-    pw_dict = [{
-            'id': i.pass_id,
-            'password': operation.decrypt_pass(i.pw),
-            'purpose': i.purpose,
-            'description': i.description
-        } for i in pw_model]
+
+    if pw_dict is None:
+        pw_dict = [{'id': i.pass_id,
+                    'password': operation.decrypt_pass(i.pw),
+                    'purpose': i.purpose,
+                    'description': i.description
+                    } for i in pw_model]
+        request.session['pw_dict'] = pw_dict
+        print(request.session['pw_dict'])
+
     return render(request, 'p_manager/index.html', {'pw_dict': pw_dict})
 
 
@@ -100,7 +132,7 @@ def auth_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            request.session['token'] = MasterPassOperator().master_pass_recorder(username + password)
+            request.session['master_pass'] = username + password
             return redirect('p_manager:index')
         else:
             error_message = 'Username or password is invalid.'
@@ -131,7 +163,7 @@ def create_new_password(request):
         password = manager.create_pass(pass_len=pass_len,
                                        uppercase=uppercase,
                                        symbol=symbol)
-        print(password)
+        # print(password)
 
         return render(request, 'p_manager/add.html', {'password': password})
     else:
@@ -142,8 +174,8 @@ def create_new_password(request):
 def add_pass(request):
     try:
         pass_id = ulid.new()
-        crypt_pass = c_pass_extract(request)
-        operation = manager.DBOperation(crypt_pass)
+        master_pass = request.session['master_pass']
+        operation = manager.DBOperation(master_pass)
         e_pass = operation.encrypt_pass(request.POST['password'])
         pw_user = request.user
         Password.objects.create(pw_user=pw_user,
@@ -151,17 +183,21 @@ def add_pass(request):
                                 pw=e_pass,
                                 purpose=request.POST['purpose'],
                                 description=request.POST['description'])
+
+        try:
+            pw_dict = request.session['pw_dict']
+        except KeyError:
+            return redirect('p_manager:index')
+
+        pw_dict.append({'id': pass_id.str,
+                        'password': request.POST['password'],
+                        'purpose': request.POST['purpose'],
+                       'description': request.POST['description']
+                        })
+        request.session['pw_dict'] = pw_dict
+        print(pw_dict)
         return redirect('p_manager:index')
 
     except KeyError:
         return render(request, 'p_manager/add.html')
 
-
-def c_pass_extract(request):
-    token = request.session['token']
-    try:
-        new_token, crypt_pass = MasterPassOperator().master_pass_extractor(pass_info=token)
-    except ValueError:
-        redirect('p_manager:logout')
-    request.session['token'] = new_token
-    return crypt_pass
